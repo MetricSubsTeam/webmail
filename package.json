@@ -1,0 +1,13 @@
+{
+  "name": "webmail",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/MetricSubsTeam/webmail.git",
+  "author": "Dizy <dev@dizy.cc>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@vercel/node": "^1.10.0",
+    "typescript": "^4.2.4"
+  }
+}
