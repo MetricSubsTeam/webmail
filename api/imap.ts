@@ -1,6 +1,6 @@
 import {VercelRequest, VercelResponse} from '@vercel/node';
 import {ImapFlow} from 'imapflow';
-import {error} from './@helpers';
+import {error} from '../helpers';
 import type {Dict} from 'tslang';
 
 const {IMAP_HOST, IMAP_PORT = '993', IMAP_SECURE = 'true'} = process.env;
@@ -16,6 +16,11 @@ const ACTION_MAP: Dict<ActionFunction> = {
 };
 
 export default async (request: VercelRequest, response: VercelResponse) => {
+  if (!request.body) {
+    error(response, 'Request body cannot be empty');
+    return;
+  }
+
   let {username, password, action, payload} = request.body;
 
   let port = Number(IMAP_PORT);
