@@ -12,6 +12,10 @@
     "@vercel/node": "^1.10.0",
     "parcel": "^2.0.0-beta.2",
     "rimraf": "^3.0.2",
+    "tslang": "^0.1.23",
     "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "imapflow": "^1.0.57"
   }
 }
